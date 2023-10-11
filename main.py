@@ -10,14 +10,15 @@ st.set_page_config(page_title="Visa Visualizations",
                    page_icon=":bar_chart:",
                    layout="wide")
 st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
+uploadedFile = st.file_uploader(dataset.xlsx, type='xlsx',accept_multiple_files=False,key="fileUploader")
 f1_approved=pd.read_excel(
-    io="dataset.xlsx",
+    "dataset.xlsx",
     engine="openpyxl",
     sheet_name="f1_data",
     header=0,
     usecols="A:L")
 b1b2=pd.read_excel(
-    io="dataset.xlsx",
+    "dataset.xlsx",
     engine="openpyxl",
     sheet_name="b1b2_data",
     header=0,
