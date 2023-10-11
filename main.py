@@ -25,8 +25,8 @@ b1b2=pd.read_excel(
     sheet_name="b1b2",
     header=0,
     usecols="A:K")
-st.dataframe(f1_approved)
-st.dataframe(b1b2)
+#st.dataframe(f1_approved)
+#st.dataframe(b1b2)
 st.sidebar.header("Filter countries:")
 country= st.sidebar.multiselect(
     'select the country:',
