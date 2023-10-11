@@ -1,0 +1,16 @@
+# .streamlit/secrets.toml
+
+[connections.gsheets]
+spreadsheet = "https://docs.google.com/spreadsheets/d/1AikiRruWamjk8XcAU_5Pteq8QWGxltDRHExSPauP3v4/edit#gid=1694660000"
+
+# From your JSON key file
+type = "service_account"
+project_id = "seamlesspay"
+private_key_id = "f58850bced6782cfea1565ccd4545400acd21b30"
+private_key = "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC1CQ9qAey172mo\nfJkLuXqHXinrbgcmV7tuZb6QIZsQRbTzfgxFK5EPMxZnqo9FTgr1eRM2Pm27zwBN\nakT5NyFrdU4mW8NUFqoF3zHsKzOFiJzQoX1OwKtOF4qShK4ve7jx7OuBLD0NkIZV\nw+DP6gEBprf9aXExN7+cYHZF0fJMnPwM4CNRifFcV66DCiDsSSpyTh4VvPD3veS5\nvfb+MjL+x4fDr0jcloZnjK3QBuFvZfK7Ud1lI5Q6GXHlChrk3qeux204dDLfOV7B\n+rcfXTWAolLfm+AnTLXxALrq+zzcEQUS30Ws16+IEfu65VZ7HCHpeQoraC5ZZTbc\nmfQWDFqTAgMBAAECggEACcfoVUniIbio2x/tBOOLtmFk0mhEN2yC0kwc9GlcZcMR\nkhyiFq3STVS6EsL15ECuYH5rubQikASqRFFH6+ijamYQ4T53JyvlgIiDVS2TjKHJ\nsMJVpG00bcIUpb97ybgqUQ43CxuT90LZS/jxRH2k4EbDQHKNJj0xodLaxDSIasS/\njYoFHDZIN15ldWh1WsLYR7FFKaKdTnsNHHd/e5q21gvOSeZ6X8TpqTlmOerp8w1q\nHpcmlcLok8QY1Fm+fsFrLDjXP2BAp8QWER1BWiqGO8YUXmRaAW+gklwIUVaUtHyR\nidL434chInS2ZtJPdlmuyNW+w3NZiq1v5/huI4SngQKBgQDtKXP+mW2BXUWskLB4\nVp4bsAjxJHeW0vYxP+Qu9ZJZxbepKJ8pJdt9mjDt+Sp5foayOJDpKEXvfs571+ki\nQm3IF1pbHq5B5ab4UMOH0mjtLOxcxPjwWIlNRqQl2aCa56gfzGSZiYXVISXyMz5x\naDGFcMLL66u/nDUpVFX4AwMJGQKBgQDDak6vUOkaN0aGPbFgKuGN8G4fUEKm/eK9\n7AptsdI5aetZKTx3pEX6ehQu4jsZioqMG3mrAREgJHSBTDg/oD/NIzl1OQsAAw/W\nn3qQSEcyPU3Wx0t0MKBUC+TkJtWgWEPntIMJqHeh84NmgzRhRDqjOvVRXYtezVdQ\nHr2zfST6iwKBgHjP2hgDPoZc5kZO+qaCsU43cYat5gG9+84A1xOY43G5x6JzYAjN\nES+9oVlIyXtUmfcl26P6cQ3ckgECbu+V2WjJhKzQR0KoY1MxiTmiVPMlJE7pxEpj\nP6ZO6wWhBDCE+98e9sxEAxocJcFom1GYG0n3tDO/HSGhyG8CWDzcA+rZAoGAJLhm\nPsVqeBWo9/LB0Ptd1Qk3+ERhsfWFVQD02LYQdd90bRW1mhnRWIb2IfU6+8qvzDIh\ng8O4jxyqk91ZuIMJWifjVSa57W+l20OuiUw7rLIeXVynzhaRGhn+Ee1GOVI8uF6Q\nPRFeIZ2btHi1MA3dIu0iSf7VAKR/YrvUE9VRTI8CgYEAtCNNgOnZYlkLuJTqqmjP\nx0g0plV5LNS28qIm0Ycj0fcwJQgg9CWmt59yZos1EprHsN+W5zBZMjY6OcbcFLzG\nfsE6HE4OBvw4b7r7BEhTQ+wgn+PKeDOCyLwRKllFoYEScBLtjEdJ9bQJQGR3SEOv\nSkwAe8iVRh6v+kQJK/TXLUY=\n-----END PRIVATE KEY-----\n"
+client_email = "seamless-account@seamlesspay.iam.gserviceaccount.com"
+client_id = "116847840825694144097"
+auth_uri = "https://accounts.google.com/o/oauth2/auth"
+token_uri = "https://oauth2.googleapis.com/token"
+auth_provider_x509_cert_url = "https://www.googleapis.com/oauth2/v1/certs"
+client_x509_cert_url = "https://www.googleapis.com/robot/v1/metadata/x509/seamless-account%40seamlesspay.iam.gserviceaccount.com""
