@@ -18,7 +18,7 @@ if uploaded_file:
   workbook.save("C:\\Users\\elisha\\Downloads\\test")
   with open("C:\\Users\\elisha\\Downloads\\test","rb") as fh:
     buffer=io.BytesIO(fh.read())
-st.table(worksheet)
+st.table(buffer)
 #uploadedFile = st.file_uploader(dataset.xlsx, type='xlsx',accept_multiple_files=False,key="fileUploader")
 #url= "https://github.com/Spartan1203/seamless-_pay/blob/main/dataset.xlsx"
 #response=requests.get(url)
