@@ -8,7 +8,7 @@ st.set_page_config(page_title="Visa Visualizations",
                    layout="wide")
 st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
 f1_approved=pd.read_excel(
-    io="https://github.com/Spartan1203/seamless-_pay/blob/main/FYs97-22_NIVDetailTable%20(1).xlsx",
+    io="seamless_pay/FYs97-22_NIVDetailTable (1).xlsx",
     engine="openpyxl",
     sheet_name="f1_data",
     header=0,
