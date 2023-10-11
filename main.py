@@ -25,7 +25,7 @@ st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
 url= "https://docs.google.com/spreadsheets/d/1AikiRruWamjk8XcAU_5Pteq8QWGxltDRHExSPauP3v4/edit#gid=1694660000"
 conn=st.experimental_connection("gsheets",type=GSheetsConnection)
 data=conn.read(spreadsheet=url,usecols="A:L")
-st.dataframe(data
+st.table(data)
 #response=requests.get(url)
 #data=response.content
 #workbook=pd.ExcelFile(io.BytesIO(data))
@@ -45,7 +45,7 @@ st.dataframe(data
     #usecols="A:K")
 #st.dataframe(f1_approved)
 #st.dataframe(b1b2)
-st.sidebar.header("Filter countries:")
+#st.sidebar.header("Filter countries:")
 country= st.sidebar.multiselect(
     'select the country:',
     default=f1_approved['Countries'].unique(),
