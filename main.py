@@ -6,7 +6,7 @@ import folium
 import io
 import requests
 from openpyxl import load_workbook, Workbook, reader
-import gspread
+from streamlit_gsheets import GSheetsConnection
 #from st_files_connection import FilesConnection
 #conn=st.expreimental_connection('gcs', type=FilesConnection)
 st.set_page_config(page_title="Visa Visualizations",
@@ -20,9 +20,12 @@ st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
    # sheet_name="f1_data",
     #header=0,
     #usecols="A:L")
-st.dataframe(worksheet)
+#st.dataframe(worksheet)
 #uploadedFile = st.file_uploader(dataset.xlsx, type='xlsx',accept_multiple_files=False,key="fileUploader")
-#url= "https://github.com/Spartan1203/seamless-_pay/blob/main/dataset.xlsx"
+url= "https://docs.google.com/spreadsheets/d/1AikiRruWamjk8XcAU_5Pteq8QWGxltDRHExSPauP3v4/edit#gid=1694660000"
+conn=st.experimental_connection("gsheets",type=GSheetsConnection)
+data=conn.read(spreadsheet=url,usecols="A:L")
+st.dataframe(data
 #response=requests.get(url)
 #data=response.content
 #workbook=pd.ExcelFile(io.BytesIO(data))
