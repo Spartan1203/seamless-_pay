@@ -15,8 +15,8 @@ st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
 uploaded_file=st.file_uploader("C:\\Users\\elisha\\Downloads\\test",type=['xslx'])
 if uploaded_file is not None:
   workbook=pd.ExcelFile(uploaded_file)
-  worksheet=workbook.parse(workbook.sheet_names['f1_data'])
-  st.dataframe(worksheet)
+worksheet=workbook.parse(workbook.sheet_names['f1_data'])
+st.dataframe(worksheet)
 #f1_approved=pd.read_excel(
  #   buffer,
   #  engine="openpyxl",
