@@ -23,7 +23,7 @@ if uploaded_file is not None:
    # sheet_name="f1_data",
     #header=0,
     #usecols="A:L")
-st.dataframe(buffer)
+st.dataframe(worksheet)
 #uploadedFile = st.file_uploader(dataset.xlsx, type='xlsx',accept_multiple_files=False,key="fileUploader")
 #url= "https://github.com/Spartan1203/seamless-_pay/blob/main/dataset.xlsx"
 #response=requests.get(url)
