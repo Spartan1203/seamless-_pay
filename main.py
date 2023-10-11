@@ -22,7 +22,6 @@ if uploaded_file is not None:
 
 buffer=io.BytesIO()
 wb.save(buffer)
-st.write(wb.sheet_names)
 st.download_button(label="xcel",data=buffer, file_name="test.xslx")
 #f1_approved=pd.read_excel(
  #   buffer,
