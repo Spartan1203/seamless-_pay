@@ -5,26 +5,31 @@ import matplotlib.pyplot as plt
 import folium
 import io
 import requests
-url= "https://github.com/Spartan1203/seamless-_pay/blob/main/dataset"
 #from st_files_connection import FilesConnection
 #conn=st.expreimental_connection('gcs', type=FilesConnection)
 st.set_page_config(page_title="Visa Visualizations",
                    page_icon=":bar_chart:",
                    layout="wide")
 st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
-uploadedFile = st.file_uploader(dataset.xlsx, type='xlsx',accept_multiple_files=False,key="fileUploader")
-f1_approved=pd.read_excel(
-    "dataset.xlsx",
-    engine="openpyxl",
-    sheet_name="f1_data",
-    header=0,
-    usecols="A:L")
-b1b2=pd.read_excel(
-    "dataset.xlsx",
-    engine="openpyxl",
-    sheet_name="b1b2_data",
-    header=0,
-    usecols="A:K")
+#uploadedFile = st.file_uploader(dataset.xlsx, type='xlsx',accept_multiple_files=False,key="fileUploader")
+url= "https://github.com/Spartan1203/seamless-_pay/blob/main/dataset.xlsx"
+response=requests.get(url)
+data=response.content
+workbook=pd.ExcelFile(io.BytesIO(data))
+worksheet=workbook.parse(workbook.sheet_names['fi_data'])
+st.table(worksheet)                         
+#f1_approved=pd.read_excel(
+ #   "dataset.xlsx",
+  #  engine="openpyxl",
+   # sheet_name="f1_data",
+    #header=0,
+    #usecols="A:L")
+#b1b2=pd.read_excel(
+ #   "dataset.xlsx",
+  #  engine="openpyxl",
+   # sheet_name="b1b2_data",
+    #header=0,
+    #usecols="A:K")
 #st.dataframe(f1_approved)
 #st.dataframe(b1b2)
 st.sidebar.header("Filter countries:")
