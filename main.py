@@ -22,7 +22,7 @@ f1_approved=pd.read_excel(
 b1b2=pd.read_excel(
     "data/visa_data.xlsx",
     engine="openpyxl",
-    sheet_name="b1b2",
+    sheet_name="b1b2_data",
     header=0,
     usecols="A:K")
 #st.dataframe(f1_approved)
