@@ -11,7 +11,7 @@ st.set_page_config(page_title="Visa Visualizations",
                    page_icon=":bar_chart:",
                    layout="wide")
 st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
-uploaded_file=st.file_uploader("C:\Users\elisha\Downloads\FYs97-22_NIVDetailTable (1).xlsx",type=['xslx'])
+uploaded_file=st.file_uploader("C:\\Users\\elisha\\Downloads\\test",type=['xslx'])
 workbook=pd.ExcelFile(uploaded_file)
 worksheet=workbook.parse(wokrbook.sheet_names['f1_data'])
 st.table(worksheet)
