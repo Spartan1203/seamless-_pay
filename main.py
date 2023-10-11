@@ -3,7 +3,6 @@ import streamlit as st
 import plotly_express as px
 import matplotlib.pyplot as plt
 import folium
-from streamlit_folium import folium_static
 st.set_page_config(page_title="Visa Visualizations",
                    page_icon=":bar_chart:",
                    layout="wide")
