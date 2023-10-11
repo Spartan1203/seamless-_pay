@@ -12,7 +12,7 @@ st.set_page_config(page_title="Visa Visualizations",
                    layout="wide")
 st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
 #new= pd.read_excel("data/seamless_pay.xlsx", engine='openpyxl',sheet_name='f1_data')
-st.dataframe(new)                        
+#st.dataframe(new)                        
 f1_approved=pd.read_excel(
     "data/seamless_pay.xlsx",
     engine="openpyxl",
