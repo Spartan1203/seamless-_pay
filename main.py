@@ -10,9 +10,7 @@ from streamlit_gsheets import GSheetsConnection
 st.set_page_config(page_title="Visa Visualizations",
                    page_icon=":bar_chart:",
                    layout="wide")
-st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
-#new= pd.read_excel("data/seamless_pay.xlsx", engine='openpyxl',sheet_name='f1_data')
-#st.dataframe(new)                        
+st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")                       
 f1_approved=pd.read_excel(
     "data/visa_data.xlsx",
     engine="openpyxl",
@@ -25,8 +23,6 @@ b1b2=pd.read_excel(
     sheet_name="b1b2_data",
     header=0,
     usecols="A:K")
-#st.dataframe(f1_approved)
-#st.dataframe(b1b2)
 st.sidebar.header("Filter countries:")
 country= st.sidebar.multiselect(
     'select the country:',
@@ -57,8 +53,6 @@ df_selection= f1_approved.query(
 df_selection.set_index("Countries", inplace=True)
 st.subheader("F1 Visa Refusal Rates Data for Africa: 2013-2022")
 st.dataframe(df_selection)
-
-
 st.title(":bar_chart: Visa Visuals")
 st.markdown("##")
 total_applications=df_selection['Total'].sum()
@@ -72,7 +66,6 @@ with right_column:
     st.subheader('Average applications:')
     st.subheader(f"{average_applications}")
     st.markdown("---")
-
 
 df_new_1=df_selection.drop(['Total','Average_applications'],axis=1)
 df_new_1=df_new_1.query("Countries==@country")
