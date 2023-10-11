@@ -13,16 +13,10 @@ st.set_page_config(page_title="Visa Visualizations",
                    layout="wide")
 st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
 uploaded_file=st.file_uploader("C:\\Users\\elisha\\Downloads\\test",type=['xslx'])
-wb=Workbook()
 if uploaded_file is not None:
-  wb=load_workbook(uploaded_file, read_only=False)
-  st.write(wb)
-  st.write(wb.sheet_names)
-  st.write(active)
-
-buffer=io.BytesIO()
-wb.save(buffer)
-st.download_button(label="xcel",data=buffer, file_name="test.xslx")
+  workbook=pd.ExcelFile(uploaded_file)
+  worksheet=workbook.parse(workbook.sheet_names['f1_data'])
+  st.table(worksheet)
 #f1_approved=pd.read_excel(
  #   buffer,
   #  engine="openpyxl",
