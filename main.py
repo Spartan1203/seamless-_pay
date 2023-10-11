@@ -3,7 +3,9 @@ import streamlit as st
 import plotly_express as px
 import matplotlib.pyplot as plt
 import folium
-#import io from BytesIO
+import io
+import requests
+url=
 #from st_files_connection import FilesConnection
 #conn=st.expreimental_connection('gcs', type=FilesConnection)
 st.set_page_config(page_title="Visa Visualizations",
