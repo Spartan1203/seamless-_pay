@@ -6,4 +6,4 @@ folium
 plotly_express
 openpyxl
 google-cloud-storage
-streamlit-data-manager
+streamlit_data_manager
