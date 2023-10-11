@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import folium
 import io
 import requests
-from openpyxl import load_workbook
+from openpyxl import load_workbook, Workbook, reader
 #from st_files_connection import FilesConnection
 #conn=st.expreimental_connection('gcs', type=FilesConnection)
 st.set_page_config(page_title="Visa Visualizations",
@@ -13,11 +13,17 @@ st.set_page_config(page_title="Visa Visualizations",
                    layout="wide")
 st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
 uploaded_file=st.file_uploader("C:\\Users\\elisha\\Downloads\\test",type=['xslx'])
-if uploaded_file:
-  workbook=openpyxl.load_workbook(uploaded_file, read_only=False)
-  workbook.save("C:\\Users\\elisha\\Downloads\\test")
-  with open("C:\\Users\\elisha\\Downloads\\test","rb") as fh:
-    buffer=io.BytesIO(fh.read())
+wb=Workbook()
+if uploaded_file is not None:
+  wb=load_workbook(uploaded_file, read_only=False)
+  st.write(wb)
+  st.write(wb.sheet_names)
+  st.write(active)
+
+buffer=io.BytesIO()
+wb.save(buffer)
+
+st.download_button(label="xcel",data=buffer, file_name="test.xslx")
 st.table(buffer)
 #uploadedFile = st.file_uploader(dataset.xlsx, type='xlsx',accept_multiple_files=False,key="fileUploader")
 #url= "https://github.com/Spartan1203/seamless-_pay/blob/main/dataset.xlsx"
