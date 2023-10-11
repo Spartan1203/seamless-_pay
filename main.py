@@ -14,13 +14,13 @@ st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
 #new= pd.read_excel("data/seamless_pay.xlsx", engine='openpyxl',sheet_name='f1_data')
 #st.dataframe(new)                        
 f1_approved=pd.read_excel(
-    "data/seamless_pay.xlsx",
+    "data/visa_data.xlsx",
     engine="openpyxl",
     sheet_name="f1_data",
     header=0,
     usecols="A:L")
 b1b2=pd.read_excel(
-    "data/seamless_pay.xlsx",
+    "data/visa_data.xlsx",
     engine="openpyxl",
     sheet_name="b1b2",
     header=0,
