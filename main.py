@@ -12,12 +12,12 @@ st.set_page_config(page_title="Visa Visualizations",
                    layout="wide")
 st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
 #uploadedFile = st.file_uploader(dataset.xlsx, type='xlsx',accept_multiple_files=False,key="fileUploader")
-url= "https://github.com/Spartan1203/seamless-_pay/blob/main/dataset.xlsx"
-response=requests.get(url)
-data=response.content
-workbook=pd.ExcelFile(io.BytesIO(data))
-worksheet=workbook.parse(workbook.sheet_names['fi_data'])
-st.table(worksheet)                         
+#url= "https://github.com/Spartan1203/seamless-_pay/blob/main/dataset.xlsx"
+#response=requests.get(url)
+#data=response.content
+#workbook=pd.ExcelFile(io.BytesIO(data))
+#worksheet=workbook.parse(workbook.sheet_names['fi_data'])
+#st.table(worksheet)                         
 #f1_approved=pd.read_excel(
  #   "dataset.xlsx",
   #  engine="openpyxl",
