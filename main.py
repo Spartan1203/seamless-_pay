@@ -7,46 +7,27 @@ import io
 import requests
 from openpyxl import load_workbook, Workbook, reader
 from streamlit_gsheets import GSheetsConnection
-#from st_files_connection import FilesConnection
-#conn=st.expreimental_connection('gcs', type=FilesConnection)
 st.set_page_config(page_title="Visa Visualizations",
                    page_icon=":bar_chart:",
                    layout="wide")
 st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
-new= pd.read_excel("data/seamless_pay.xlsx", engine='openpyxl',sheet_name='f1_data')
-st.dataframe(new)
-#f1_approved=pd.read_excel(
- #   buffer,
-  #  engine="openpyxl",
-   # sheet_name="f1_data",
-    #header=0,
-    #usecols="A:L")
-#st.dataframe(worksheet)
-#uploadedFile = st.file_uploader(dataset.xlsx, type='xlsx',accept_multiple_files=False,key="fileUploader")
-url= "https://docs.google.com/spreadsheets/d/1AikiRruWamjk8XcAU_5Pteq8QWGxltDRHExSPauP3v4/edit#gid=1694660000"
-conn=st.experimental_connection("gsheets",type=GSheetsConnection)
-data=conn.read(spreadsheet=url)
-st.table(data)
-#response=requests.get(url)
-#data=response.content
-#workbook=pd.ExcelFile(io.BytesIO(data))
-#worksheet=workbook.parse(workbook.sheet_names['f1_data'])
-#st.table(worksheet)                         
-#f1_approved=pd.read_excel(
- #   "dataset.xlsx",
-  #  engine="openpyxl",
-   # sheet_name="f1_data",
-    #header=0,
-    #usecols="A:L")
-#b1b2=pd.read_excel(
- #   "dataset.xlsx",
-  #  engine="openpyxl",
-   # sheet_name="b1b2_data",
-    #header=0,
-    #usecols="A:K")
-#st.dataframe(f1_approved)
-#st.dataframe(b1b2)
-#st.sidebar.header("Filter countries:")
+#new= pd.read_excel("data/seamless_pay.xlsx", engine='openpyxl',sheet_name='f1_data')
+st.dataframe(new)                        
+f1_approved=pd.read_excel(
+    "data/seamless_pay.xlsx",
+    engine="openpyxl",
+    sheet_name="f1_data",
+    header=0,
+    usecols="A:L")
+b1b2=pd.read_excel(
+    "data/seamless_pay.xlsx",
+    engine="openpyxl",
+    sheet_name="b1b2_data",
+    header=0,
+    usecols="A:K")
+st.dataframe(f1_approved)
+st.dataframe(b1b2)
+st.sidebar.header("Filter countries:")
 country= st.sidebar.multiselect(
     'select the country:',
     default=f1_approved['Countries'].unique(),
