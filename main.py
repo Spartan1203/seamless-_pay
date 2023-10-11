@@ -24,7 +24,7 @@ st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
 #uploadedFile = st.file_uploader(dataset.xlsx, type='xlsx',accept_multiple_files=False,key="fileUploader")
 url= "https://docs.google.com/spreadsheets/d/1AikiRruWamjk8XcAU_5Pteq8QWGxltDRHExSPauP3v4/edit#gid=1694660000"
 conn=st.experimental_connection("gsheets",type=GSheetsConnection)
-data=conn.read(spreadsheet=url,usecols="A:L")
+data=conn.read(spreadsheet=url)
 st.table(data)
 #response=requests.get(url)
 #data=response.content
