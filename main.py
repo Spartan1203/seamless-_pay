@@ -8,7 +8,7 @@ st.set_page_config(page_title="Visa Visualizations",
                    layout="wide")
 st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
 f1_approved=pd.read_excel(
-    io="C:\\Users\\Victor\\OneDrive\\Documents\\FYs97-22_NIVDetailTable (1).xlsx",
+    io="https://github.com/Spartan1203/seamless-_pay/blob/main/FYs97-22_NIVDetailTable%20(1).xlsx",
     engine="openpyxl",
     sheet_name="f1_data",
     header=0,
@@ -52,6 +52,7 @@ df_selection.set_index("Countries", inplace=True)
 st.subheader("F1 Visa Refusal Rates Data for Africa: 2013-2022")
 st.dataframe(df_selection)
 
+
 st.title(":bar_chart: Visa Visuals")
 st.markdown("##")
 total_applications=df_selection['Total'].sum()
@@ -65,6 +66,7 @@ with right_column:
     st.subheader('Average applications:')
     st.subheader(f"{average_applications}")
     st.markdown("---")
+
 
 df_new_1=df_selection.drop(['Total','Average_applications'],axis=1)
 df_new_1=df_new_1.query("Countries==@country")
