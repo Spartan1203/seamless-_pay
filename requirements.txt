@@ -5,6 +5,3 @@ matplotlib
 folium
 plotly_express
 openpyxl
-google-cloud-storage
-gspread
-st-gsheets-connection
