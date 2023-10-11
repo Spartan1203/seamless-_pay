@@ -16,14 +16,14 @@ uploaded_file=st.file_uploader("C:\\Users\\elisha\\Downloads\\test",type=['xslx'
 if uploaded_file is not None:
   workbook=pd.ExcelFile(uploaded_file)
   worksheet=workbook.parse(workbook.sheet_names['f1_data'])
-st.table(worksheet)
+  st.dataframe(worksheet)
 #f1_approved=pd.read_excel(
  #   buffer,
   #  engine="openpyxl",
    # sheet_name="f1_data",
     #header=0,
     #usecols="A:L")
-st.table(buffer)
+st.dataframe(buffer)
 #uploadedFile = st.file_uploader(dataset.xlsx, type='xlsx',accept_multiple_files=False,key="fileUploader")
 #url= "https://github.com/Spartan1203/seamless-_pay/blob/main/dataset.xlsx"
 #response=requests.get(url)
