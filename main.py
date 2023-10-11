@@ -11,7 +11,7 @@ st.set_page_config(page_title="Visa Visualizations",
                    page_icon=":bar_chart:",
                    layout="wide")
 st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
-uploaded_file=st.file_uploader("https://docs.google.com/spreadsheets/d/1AikiRruWamjk8XcAU_5Pteq8QWGxltDRHExSPauP3v4/edit#gid=1694660000"type=['xslx'])
+uploaded_file=st.file_uploader("https://docs.google.com/spreadsheets/d/1AikiRruWamjk8XcAU_5Pteq8QWGxltDRHExSPauP3v4/edit#gid=1694660000",type=['xslx'])
 if uploaded_file is not 
 None:
   workbook=pd.ExcelFile(uploaded_file)
