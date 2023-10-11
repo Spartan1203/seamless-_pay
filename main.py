@@ -3,10 +3,7 @@ import streamlit as st
 import plotly_express as px
 import matplotlib.pyplot as plt
 import folium
-import io
-import requests
 from openpyxl import load_workbook, Workbook, reader
-from streamlit_gsheets import GSheetsConnection
 st.set_page_config(page_title="Visa Visualizations",
                    page_icon=":bar_chart:",
                    layout="wide")
