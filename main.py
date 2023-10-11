@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import folium
 import io
 import requests
+from open_pyxl import load_workbook
 #from st_files_connection import FilesConnection
 #conn=st.expreimental_connection('gcs', type=FilesConnection)
 st.set_page_config(page_title="Visa Visualizations",
@@ -12,8 +13,11 @@ st.set_page_config(page_title="Visa Visualizations",
                    layout="wide")
 st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
 uploaded_file=st.file_uploader("C:\\Users\\elisha\\Downloads\\test",type=['xslx'])
-workbook=pd.ExcelFile(uploaded_file)
-worksheet=workbook.parse(wokrbook.sheet_names['f1_data'])
+if uploaded_file:
+  workbook=openpyxl.load_workbook(uploaded_file, read_only=False)
+  workbook.save("C:\\Users\\elisha\\Downloads\\test")
+  with open("C:\\Users\\elisha\\Downloads\\test","rb") as fh:
+    buffer=io.BytesIO(fh.read())
 st.table(worksheet)
 #uploadedFile = st.file_uploader(dataset.xlsx, type='xlsx',accept_multiple_files=False,key="fileUploader")
 #url= "https://github.com/Spartan1203/seamless-_pay/blob/main/dataset.xlsx"
