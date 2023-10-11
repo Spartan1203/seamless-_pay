@@ -6,13 +6,17 @@ import folium
 import io
 import requests
 from openpyxl import load_workbook, Workbook, reader
+import streamlit_data_manager as sd
+excel_file=sd.ExcelConnection("C:\\Users\\elisha\\Downloads\\test.xlsx")
+df=excel_file.read_data()
+st.dataframe(df)
 #from st_files_connection import FilesConnection
 #conn=st.expreimental_connection('gcs', type=FilesConnection)
 st.set_page_config(page_title="Visa Visualizations",
                    page_icon=":bar_chart:",
                    layout="wide")
 st.title(":blue[Exploratory Data Analysis of Visa Applications from Africa]")
-uploaded_file=st.file_uploader("C:\\Users\\elisha\\Downloads\\test",type=['xslx'])
+uploaded_file=st.file_uploader("C:\\Users\\elisha\\Downloads\\test.xlsx",type=['xslx'])
 workbook=pd.ExcelFile(uploaded_file)
 worksheet=Workbook.parse(workbook.sheet_names['f1_data'])
 st.dataframe(worksheet)
