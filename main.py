@@ -22,14 +22,14 @@ if uploaded_file is not None:
 
 buffer=io.BytesIO()
 wb.save(buffer)
-
+st.write(wb.sheet_names)
 st.download_button(label="xcel",data=buffer, file_name="test.xslx")
-f1_approved=pd.read_excel(
-    buffer,
-    engine="openpyxl",
-    sheet_name="f1_data",
-    header=0,
-    usecols="A:L")
+#f1_approved=pd.read_excel(
+ #   buffer,
+  #  engine="openpyxl",
+   # sheet_name="f1_data",
+    #header=0,
+    #usecols="A:L")
 st.dataframe(buffer)
 #uploadedFile = st.file_uploader(dataset.xlsx, type='xlsx',accept_multiple_files=False,key="fileUploader")
 #url= "https://github.com/Spartan1203/seamless-_pay/blob/main/dataset.xlsx"
