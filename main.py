@@ -29,7 +29,7 @@ st.download_button(label="xcel",data=buffer, file_name="test.xslx")
    # sheet_name="f1_data",
     #header=0,
     #usecols="A:L")
-st.dataframe(buffer)
+st.table(buffer)
 #uploadedFile = st.file_uploader(dataset.xlsx, type='xlsx',accept_multiple_files=False,key="fileUploader")
 #url= "https://github.com/Spartan1203/seamless-_pay/blob/main/dataset.xlsx"
 #response=requests.get(url)
