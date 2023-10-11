@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import folium
 import io
 import requests
-from open_pyxl import load_workbook
+from openpyxl import load_workbook
 #from st_files_connection import FilesConnection
 #conn=st.expreimental_connection('gcs', type=FilesConnection)
 st.set_page_config(page_title="Visa Visualizations",
